@@ -1,0 +1,8 @@
+{
+  "name": "date-fns",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+  "install": "corepack enable && corepack prepare pnpm@10.14.0 --activate && pnpm install --frozen-lockfile"
+}
