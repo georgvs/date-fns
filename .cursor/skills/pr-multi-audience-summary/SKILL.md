@@ -33,22 +33,22 @@ Do not invent counts, percentages, or verification claims.
 
 Keep the full message short enough for one screen. Use exactly these 3 sections and then the PR link.
 
-### Section 1 — PM (tone: formal, plain business language)
+### Section 1 — PM (plain business language)
 
-`*PM Update (Formal)*`
+`*PM Update*`
 - What changed: <plain-language outcome>
 - Why it matters: <business/customer impact>
 
-### Section 2 — QA (tone: helpful, test coverage)
+### Section 2 — QA (test coverage)
 
-`*QA Update (Helpful)*`
+`*QA Update*`
 - Verified: <tests/checks that ran and what they validated>
 - Test counts: <exact numbers from PR/checks or "Not reported in PR/checks">
 - Gaps/Risks for QA: <known unverified areas, if any>
 
-### Section 3 — DevOps (tone: technical, scope + CI)
+### Section 3 — DevOps (scope + CI)
 
-`*DevOps Update (Technical)*`
+`*DevOps Update*`
 - Scope: <services/modules/config/deploy surface touched>
 - CI: <check names and pass/fail state from PR checks>
 - Operational notes: <migrations, env vars, rollout, or "None reported">
