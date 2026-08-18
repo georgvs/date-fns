@@ -47,6 +47,24 @@ describe("subBusinessDaysExcludingHolidays", () => {
     expect(result instanceof Date && isNaN(result.getTime())).toBe(true);
   });
 
+  it("returns `Invalid Date` if the given amount is Infinity", () => {
+    const result = subBusinessDaysExcludingHolidays(
+      new Date(2014, 8 /* Sep */, 8),
+      Infinity,
+      { holidays: [new Date(2014, 8 /* Sep */, 4)] },
+    );
+    expect(result instanceof Date && isNaN(result.getTime())).toBe(true);
+  });
+
+  it("returns `Invalid Date` if the given amount is -Infinity", () => {
+    const result = subBusinessDaysExcludingHolidays(
+      new Date(2014, 8 /* Sep */, 8),
+      -Infinity,
+      { holidays: [new Date(2014, 8 /* Sep */, 4)] },
+    );
+    expect(result instanceof Date && isNaN(result.getTime())).toBe(true);
+  });
+
   it("resolves the date type by default", () => {
     const result = subBusinessDaysExcludingHolidays(Date.now(), 5);
     expect(result).toBeInstanceOf(Date);
