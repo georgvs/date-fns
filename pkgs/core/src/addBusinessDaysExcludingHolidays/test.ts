@@ -77,7 +77,10 @@ describe("addBusinessDaysExcludingHolidays", () => {
     const result = addBusinessDaysExcludingHolidays(
       new Date("2014-09-01T10:00:00Z"),
       3,
-      { holidays: [new Date("2014-09-04T23:59:59Z")] },
+      {
+        in: tz("UTC"),
+        holidays: [new Date("2014-09-04T23:59:59Z")],
+      },
     );
     expect(result).toEqual(new Date("2014-09-05T10:00:00Z"));
   });
