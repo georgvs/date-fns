@@ -28,7 +28,13 @@ Don't do any Git operations unless explicitly requested or this file instructs y
 
 ## Cursor Cloud specific instructions
 
-Cloud agents use `.cursor/environment.json` (Node 22.19 from `.nvmrc`, pnpm 10.14 via Corepack). The install script runs `pnpm install --frozen-lockfile` at the repo root.
+Cloud agents use `.cursor/environment.json` (Node 22.19 from `.nvmrc`, pnpm 10.14 via Corepack). The install script runs `pnpm install --frozen-lockfile` at the repo root, then copies the post-slack skill to `~/.cursor/skills/post-slack/` on the VM (not into the library tree).
+
+To post to Slack, use that skill. `SLACK_WEBHOOK_URL` is a Runtime Secret — never log, print, or commit it:
+
+```sh
+node "$HOME/.cursor/skills/post-slack/scripts/post-slack.mjs" "message"
+```
 
 Verify core function changes with:
 
