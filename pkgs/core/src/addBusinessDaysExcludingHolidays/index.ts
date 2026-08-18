@@ -48,7 +48,8 @@ export function addBusinessDaysExcludingHolidays<
   amount: number,
   options?: AddBusinessDaysExcludingHolidaysOptions<ResultDate> | undefined,
 ): ResultDate {
-  if (isNaN(amount)) return constructFrom(options?.in, NaN);
+  if (isNaN(amount) || Math.abs(amount) === Infinity)
+    return constructFrom(options?.in, NaN);
   if (!options?.holidays?.length) return addBusinessDays(date, amount, options);
 
   const _date = toDate(date, options?.in);

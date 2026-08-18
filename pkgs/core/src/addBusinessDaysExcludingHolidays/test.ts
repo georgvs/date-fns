@@ -109,6 +109,24 @@ describe("addBusinessDaysExcludingHolidays", () => {
     expect(result instanceof Date && isNaN(result.getTime())).toBe(true);
   });
 
+  it("returns `Invalid Date` if the given amount is Infinity", () => {
+    const result = addBusinessDaysExcludingHolidays(
+      new Date(2014, 8 /* Sep */, 1),
+      Infinity,
+      { holidays: [new Date(2014, 8 /* Sep */, 4)] },
+    );
+    expect(result instanceof Date && isNaN(result.getTime())).toBe(true);
+  });
+
+  it("returns `Invalid Date` if the given amount is -Infinity", () => {
+    const result = addBusinessDaysExcludingHolidays(
+      new Date(2014, 8 /* Sep */, 1),
+      -Infinity,
+      { holidays: [new Date(2014, 8 /* Sep */, 4)] },
+    );
+    expect(result instanceof Date && isNaN(result.getTime())).toBe(true);
+  });
+
   it("can handle a large number of business days without holidays", () => {
     const result = addBusinessDaysExcludingHolidays(
       new Date(2014, 0 /* Jan */, 1),
