@@ -2,6 +2,8 @@
 
 export * from "./add/index.ts";
 export * from "./addBusinessDays/index.ts";
+export * from "./addBusinessDaysExcludingHolidays/index.ts";
+export * from "./addBusinessDaysExcludingHolidaysWithOptions/index.ts";
 export * from "./addBusinessDaysWithOptions/index.ts";
 export * from "./addDays/index.ts";
 export * from "./addDaysWithOptions/index.ts";
@@ -368,6 +370,8 @@ export * from "./startOfYear/index.ts";
 export * from "./startOfYearWithOptions/index.ts";
 export * from "./sub/index.ts";
 export * from "./subBusinessDays/index.ts";
+export * from "./subBusinessDaysExcludingHolidays/index.ts";
+export * from "./subBusinessDaysExcludingHolidaysWithOptions/index.ts";
 export * from "./subBusinessDaysWithOptions/index.ts";
 export * from "./subDays/index.ts";
 export * from "./subDaysWithOptions/index.ts";

@@ -4,6 +4,7 @@
   "entryPoints": [
     "./src/add/index.ts",
     "./src/addBusinessDays/index.ts",
+    "./src/addBusinessDaysExcludingHolidays/index.ts",
     "./src/addDays/index.ts",
     "./src/addHours/index.ts",
     "./src/addISOWeekYears/index.ts",
@@ -231,6 +232,7 @@
     "./src/startOfYesterday/index.ts",
     "./src/sub/index.ts",
     "./src/subBusinessDays/index.ts",
+    "./src/subBusinessDaysExcludingHolidays/index.ts",
     "./src/subDays/index.ts",
     "./src/subHours/index.ts",
     "./src/subISOWeekYears/index.ts",
