@@ -2,6 +2,7 @@
 
 export * from "./add/index.ts";
 export * from "./addBusinessDays/index.ts";
+export * from "./addBusinessDaysExcludingHolidays/index.ts";
 export * from "./addDays/index.ts";
 export * from "./addHours/index.ts";
 export * from "./addISOWeekYears/index.ts";
@@ -229,6 +230,7 @@ export * from "./startOfYear/index.ts";
 export * from "./startOfYesterday/index.ts";
 export * from "./sub/index.ts";
 export * from "./subBusinessDays/index.ts";
+export * from "./subBusinessDaysExcludingHolidays/index.ts";
 export * from "./subDays/index.ts";
 export * from "./subHours/index.ts";
 export * from "./subISOWeekYears/index.ts";

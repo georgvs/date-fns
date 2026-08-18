@@ -1,7 +1,7 @@
 ---
 description: Business-day and weekend helpers — Mon–Fri, caller-supplied exclusions, no bundled holiday data
 globs:
-  - "pkgs/core/src/{addBusinessDays,subBusinessDays,differenceInBusinessDays}/**"
+  - "pkgs/core/src/{addBusinessDays,addBusinessDaysExcludingHolidays,subBusinessDays,subBusinessDaysExcludingHolidays,differenceInBusinessDays}/**"
   - "pkgs/core/src/{isWeekend,eachWeekendOfInterval,eachWeekendOfMonth,eachWeekendOfYear}/**"
 alwaysApply: false
 ---
