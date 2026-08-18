@@ -32,6 +32,22 @@ describe("addBusinessDaysExcludingHolidays", () => {
     ).toEqual(new Date(2020, 0 /* Jan */, 14));
   });
 
+  it("returns the correct date when starting on Saturday", () => {
+    expect(
+      addBusinessDaysExcludingHolidays(new Date(2020, 0 /* Jan */, 11), 1, {
+        holidays: [new Date(2020, 0 /* Jan */, 13)],
+      }),
+    ).toEqual(new Date(2020, 0 /* Jan */, 14));
+  });
+
+  it("returns the correct date when starting on Sunday", () => {
+    expect(
+      addBusinessDaysExcludingHolidays(new Date(2020, 0 /* Jan */, 12), 1, {
+        holidays: [new Date(2020, 0 /* Jan */, 13)],
+      }),
+    ).toEqual(new Date(2020, 0 /* Jan */, 14));
+  });
+
   it("ignores holidays that fall on a weekend", () => {
     const result = addBusinessDaysExcludingHolidays(
       new Date(2020, 0 /* Jan */, 10),
