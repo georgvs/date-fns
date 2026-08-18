@@ -4,5 +4,5 @@
     "dockerfile": "Dockerfile",
     "context": "."
   },
-  "install": "corepack enable && corepack prepare pnpm@10.14.0 --activate && pnpm install --frozen-lockfile"
+  "install": "corepack enable && corepack prepare pnpm@10.14.0 --activate && pnpm install --frozen-lockfile && sh .cursor/install-cloud-skills.sh"
 }
