@@ -25,6 +25,7 @@
     "./fp": "./src/fp/index.ts",
     "./add": "./src/add/index.ts",
     "./addBusinessDays": "./src/addBusinessDays/index.ts",
+    "./addBusinessDaysExcludingHolidays": "./src/addBusinessDaysExcludingHolidays/index.ts",
     "./addDays": "./src/addDays/index.ts",
     "./addHours": "./src/addHours/index.ts",
     "./addISOWeekYears": "./src/addISOWeekYears/index.ts",
@@ -252,6 +253,7 @@
     "./startOfYesterday": "./src/startOfYesterday/index.ts",
     "./sub": "./src/sub/index.ts",
     "./subBusinessDays": "./src/subBusinessDays/index.ts",
+    "./subBusinessDaysExcludingHolidays": "./src/subBusinessDaysExcludingHolidays/index.ts",
     "./subDays": "./src/subDays/index.ts",
     "./subHours": "./src/subHours/index.ts",
     "./subISOWeekYears": "./src/subISOWeekYears/index.ts",
@@ -821,6 +823,16 @@
         "import": {
           "types": "./addBusinessDays.d.ts",
           "default": "./addBusinessDays.js"
+        }
+      },
+      "./addBusinessDaysExcludingHolidays": {
+        "require": {
+          "types": "./addBusinessDaysExcludingHolidays.d.cts",
+          "default": "./addBusinessDaysExcludingHolidays.cjs"
+        },
+        "import": {
+          "types": "./addBusinessDaysExcludingHolidays.d.ts",
+          "default": "./addBusinessDaysExcludingHolidays.js"
         }
       },
       "./addDays": {
@@ -3091,6 +3103,16 @@
         "import": {
           "types": "./subBusinessDays.d.ts",
           "default": "./subBusinessDays.js"
+        }
+      },
+      "./subBusinessDaysExcludingHolidays": {
+        "require": {
+          "types": "./subBusinessDaysExcludingHolidays.d.cts",
+          "default": "./subBusinessDaysExcludingHolidays.cjs"
+        },
+        "import": {
+          "types": "./subBusinessDaysExcludingHolidays.d.ts",
+          "default": "./subBusinessDaysExcludingHolidays.js"
         }
       },
       "./subDays": {
